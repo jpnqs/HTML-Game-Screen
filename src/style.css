@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide&display=swap');
+
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #111;
+}
+
+.planetImage {
+    width: 100px;
+    height: 100px;
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none;
+    transition: 0.3s;
+    outline: none;
+    border-style: solid;
+    border-radius: 50%;
+    border-color: rgba(0,0,0,0);
+    border-width: 5px;
+    cursor: pointer;
+}
+
+
+.planetImage:hover {
+    border-color: gray;
+    border-radius: 50%;
+    border-width: 5px;
+}
+
+.planetImage:focus, .planetImage:active {
+    border-color: #eee;
+    border-radius: 50%;
+    border-width: 5px;
+}
+
+.planetImage:active {
+    border-color: #fff;
+}
+
+#planetContainer {
+    height: 0px;
+    overflow-x: auto;
+}
+
+#description, #title, #controls {
+    font-family: "Audiowide", "Arial", serif;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+#title {
+    font-size: 24pt;
+    margin-top: 600px;
+    font-weight: bold;
+}
+
+#description {
+    margin-top: 10px;
+    font-size: 14pt;
+    width: 50%;
+    padding: 0 25%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#controls {
+    position: absolute;
+    bottom: 20px;
+}
+
+#launchButton {
+    font-family: "Audiowide", "Arial", serif;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #f44242;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #777;
+}
+  
+#launchButton:hover {
+    background-color: #db3b3b
+}
+
+#launchButton:active {
+    background-color: #db3b3b;
+    box-shadow: 0 5px #555;
+    transform: translateY(4px);
+}
