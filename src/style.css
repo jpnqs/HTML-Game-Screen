@@ -70,6 +70,7 @@ body {
     overflow-x: hidden;
     overflow-y: auto;
     top: calc( 70% + 10px);
+    color: #bbb;
     height: calc(30% - 100px );
 }
 
