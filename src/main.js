@@ -2,8 +2,17 @@ var container = document.getElementById("planetContainer");
 var description = document.getElementById("description");
 var title = document.getElementById("title");
 var usedAreas = [];
-var images = [];
-var pCount = -1;
+var images = [
+    "src/planet.png",
+    "src/planet2.png",
+    "src/planet3.png",
+    "src/planet4.png",
+    "src/planet5.png",
+    "src/planet6.png",
+    "src/planet7.png",
+    "src/planet8.png"
+];
+var pCount = Math.floor(Math.random() * (images.length)) - 1;
 var xStart = 200;
 var data = [
     {
@@ -76,6 +85,7 @@ function loadImage (src) {
     img.src = src;
     img.addEventListener("click", displayPlanetInformation);
     img.addEventListener("focus", displayPlanetInformation);
+    img.ondragstart = function() { return false; };
     img.className = "planetImage";
     img.tabIndex = "0";
     return img;
@@ -102,16 +112,4 @@ function randomPos () {
     return l;
 
 }
-
-images = [
-    "src/planet.png",
-    "src/planet2.png",
-    "src/planet3.png",
-    "src/planet4.png",
-    "src/planet5.png",
-    "src/planet6.png",
-    "src/planet7.png",
-    "src/planet8.png"
-]
-
 loadPlanets(data);
